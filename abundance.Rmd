@@ -1,0 +1,33 @@
+---
+title: "Abundance exploration"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+suppressPackageStartupMessages(library(tidyverse))
+```
+
+
+```{r readData}
+k <- read_tsv("data/2.tsv")
+meta <- read_tsv("data/meta.tsv") %>% select(sample_id = SAMPLE_ID, year = Year, geocluster = Geocluster, lat = Latitude, lon = Longitude)
+bracken <- read_tsv("data/")
+k2 <- left_join(k, meta) 
+ggplot(k2, aes(year, K )) + geom_jitter() + stat_smooth(method = "lm", se = F)
+with(k2, cor.test(K, year))
+```
+
+K is negatively correlated with year, i.e., it is the proportion of European genes in a bee
+
+```{r eval=FALSE}
+b <- read_tsv("data/bracken_report.tsv.gz", col_types = "cnccnn")
+bracken <- left_join(k2, b)
+saveRDS(bracken, file = "data/bracken.rds")
+```
+
+
+```{r}
+filter(bracken, fraction_total_reads > 0.001) %>% group_by(name) %>% filter(n() > 50) 
+```
