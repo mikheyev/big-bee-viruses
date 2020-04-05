@@ -11,23 +11,23 @@ suppressPackageStartupMessages(library(tidyverse))
 
 
 ```{r readData}
-k <- read_tsv("data/2.tsv")
-meta <- read_tsv("data/meta.tsv") %>% select(sample_id = SAMPLE_ID, year = Year, geocluster = Geocluster, lat = Latitude, lon = Longitude)
-bracken <- read_tsv("data/")
-k2 <- left_join(k, meta) 
-ggplot(k2, aes(year, K )) + geom_jitter() + stat_smooth(method = "lm", se = F)
-with(k2, cor.test(K, year))
+meta <- left_join(k, read_tsv("data/meta.tsv") %>% select(sample_id = SAMPLE_ID, year = Year, geocluster = Geocluster, lat = Latitude, lon = Longitude))
+meta$geocluster <- factor(meta$geocluster, levels = c("VER", "TAM", "BOR", "WEL"))
+bracken <- read_tsv("data/bracken_report.tsv.gz", col_types = "cnccnn")
+bracken <- left_join(meta, bracken)
+
+ggplot(meta, aes(year, 1-K, color = geocluster )) + geom_jitter() + stat_smooth(method = "lm", se = F) + ylab("K (fraction African)")
+with(meta, cor.test(K, year))
+
+ggplot(meta, aes(as.factor(year), 1-K, color = geocluster )) + geom_boxplot() + stat_smooth(method = "lm", se = F) + ylab("K (fraction African)")
+
 ```
 
 K is negatively correlated with year, i.e., it is the proportion of European genes in a bee
 
-```{r eval=FALSE}
-b <- read_tsv("data/bracken_report.tsv.gz", col_types = "cnccnn")
-bracken <- left_join(k2, b)
-saveRDS(bracken, file = "data/bracken.rds")
-```
-
-
+## Braken
 ```{r}
-filter(bracken, fraction_total_reads > 0.001) %>% group_by(name) %>% filter(n() > 50) 
+ggplot(bracken, aes(log10(fraction_total_reads))) +geom_histogram(bins = 100) + geom_vline(xintercept = log10(10^-4))
+
+filter(bracken, fraction_total_reads > 10^-4) %>% group_by(name) %>% filter(n() > 100) %>% select(name, sample_id, year, K, geocluster, fraction_total_reads) %>% ungroup() %>% pivot_wider(names_from = name, values_from = fraction_total_reads, values_fill = c(fraction_total_reads = 0))
 ```
