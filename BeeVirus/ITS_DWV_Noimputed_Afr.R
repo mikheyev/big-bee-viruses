@@ -125,6 +125,11 @@ offset <- mean(DWV.m$Afr.Extent)*model_p1q1_m$coef[5]
 ggplot()+
   geom_point(data=DWV.m,aes(x=month,y=DWV,shape='observed'))+
   geom_vline(xintercept = 0, linetype='dashed',color='darkgrey')+
+  # original fiited value
+  #geom_line(data=DWV.m[which(DWV.m$level==0), ],aes(x=month, y=fitted_gls_p1q1))+
+  #geom_line(data=DWV.m[which(DWV.m$level==1), ],aes(x=month, y=fitted_gls_p1q1))+
+  
+  # adjusted fitted value
   geom_segment(x=-86,   y   =model_p1q1_m$coef[1]+model_p1q1_m$coef[2]+offset,
                xend=-1, yend=model_p1q1_m$coef[1]+model_p1q1_m$coef[2]*86+offset,
                color='#7cae00',size=1,aes(linetype='fitted'))+
@@ -164,6 +169,11 @@ offset <- mean(DWV.q$Afr.Extent)*model_p2q2_q$coef[5]
 ggplot()+
   geom_point(data=DWV.q,aes(x=quarter,y=DWV,shape='observed'))+
   geom_vline(xintercept = 0, linetype='dashed',color='darkgrey')+
+  # original fiited value
+  #geom_line(data=DWV.q[which(DWV.q$level==0), ],aes(x=quarter, y=fitted_gls_p2q2))+
+  #geom_line(data=DWV.q[which(DWV.q$level==1), ],aes(x=quarter, y=fitted_gls_p2q2))+
+  
+  # adjusted fitted value
   geom_segment(x=-29,   y   =model_p2q2_q$coef[1]+model_p2q2_q$coef[2]+offset,
                xend=-1, yend=model_p2q2_q$coef[1]+model_p2q2_q$coef[2]*29+offset,
                color='#7cae00',size=1,aes(linetype='fitted'))+
@@ -202,6 +212,11 @@ offset <- mean(DWV.y1$Afr.Extent)*model_p2_y1$coef[5]
 ggplot()+
   geom_point(data=DWV.y1,aes(x=year.1,y=DWV,shape='observed'))+
   geom_vline(xintercept = 0, linetype='dashed',color='darkgrey')+
+  # original fiited value
+  #geom_line(data=DWV.y1[which(DWV.y1$level==0), ],aes(x=year.1, y=fitted_gls_p2))+
+  #geom_line(data=DWV.y1[which(DWV.y1$level==1), ],aes(x=year.1, y=fitted_gls_p2))+
+  
+  # adjusted fitted value
   geom_segment(x=-7,   y   =model_p2_y1$coef[1]+model_p2_y1$coef[2]+offset,
                xend=-1,yend=model_p2_y1$coef[1]+model_p2_y1$coef[2]*7+offset,
                color='#7cae00',size=1,aes(linetype='fitted'))+
@@ -239,6 +254,11 @@ offset <- mean(DWV.y2$Afr.Extent)*model_ols_y2$coef[5]
 ggplot()+
   geom_point(data=DWV.y2,aes(x=year.2,y=DWV,shape='observed'))+
   geom_vline(xintercept = 0, linetype='dashed',color='darkgrey')+
+  # original fiited value
+  #geom_line(data=DWV.y2[which(DWV.y2$level==0), ],aes(x=year.2, y=fitted_ols))+
+  #geom_line(data=DWV.y2[which(DWV.y2$level==1), ],aes(x=year.2, y=fitted_ols))+
+  
+  # adjusted fitted value
   geom_segment(x=-7,   y   =model_ols_y2$coef[1]+model_ols_y2$coef[2]+offset,
                xend=-1,yend=model_ols_y2$coef[1]+model_ols_y2$coef[2]*7+offset,
                color='#7cae00',size=1,aes(linetype='fitted'))+
