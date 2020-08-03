@@ -146,14 +146,14 @@ ggplot()+
   scale_x_continuous(breaks = c(seq(from = -86, to = 51, by = 4)))
 
 #------------------------------------------------------------------------------------
-# monthly,DWV
+# quarterly,DWV
 DWV.q <- data.q[ ,c(1,7,19:21,18)]
 
 ############
 # modelling
 ############
 
-# Fit the GLS regression model with p=1, q=1 as the previous analysis 
+# Fit the GLS regression model with p=2, q=2 as the previous analysis 
 model_p2q2_q <- gls(data=DWV.q,DWV~time+level+trend+Afr.Extent,
                     correlation=corARMA(p=2,q=2,form=~time),
                     method="ML")
@@ -197,7 +197,7 @@ DWV.y1 <- data.y1[ ,c(1,7,19:21,18)]
 # modelling
 ############
 
-# Fit the GLS regression model with p=1, q=1 as the previous analysis 
+# Fit the GLS regression model with p=2, as the previous analysis 
 model_p2_y1 <- gls(data=DWV.y1,DWV~time+level+trend+Afr.Extent,
                     correlation=corARMA(p=2,form=~time),
                     method="ML")
@@ -240,7 +240,7 @@ DWV.y2 <- data.y2[ ,c(1,7,19:21,18)]
 # modelling
 ############
 
-# Fit the GLS regression model with p=1, q=1 as the previous analysis 
+# Fit the OLS regression model
 model_ols_y2 <- lm(data=DWV.y2,DWV~time+level+trend+Afr.Extent)
 summary(model_ols_y2)
 AIC(model_ols_y2)  #122.20
