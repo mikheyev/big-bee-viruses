@@ -7,7 +7,8 @@ library(lmtest)
 library(imputeTS) #na_kalman()
 library(reshape2) #melt()
 library(ggsci)
-
+library(ResourceSelection)  #hoslem.test()
+ 
 rm(list = ls())
 
 data <- read.csv("new_data.csv")
@@ -181,6 +182,9 @@ ggplot()+
   guides(shape = guide_legend(order=1),linetype=guide_legend(order=2))+
   scale_x_continuous(breaks = c(seq(from = -86, to = 51, by = 4)))
 
+# Hosmer-Lemeshow Goodness of Fit
+hoslem.test(DWV.m$DWV, fitted(model_q13_m))  #p-value=1
+
 #------------------------------------------------------------------------------------
 # quarterly,DWV
 DWV.q <- data.q[ ,c(1,7,19:21)]
@@ -279,6 +283,8 @@ ggplot()+
   guides(shape = guide_legend(order=1),linetype=guide_legend(order=2))+
   scale_x_continuous(breaks = c(seq(from = -28, to = 17, by = 1)))
 
+# Hosmer-Lemeshow Goodness of Fit
+hoslem.test(DWV.q$DWV, fitted(model_p2q2_q))  #p-value=1
 
 #-----------------------------------------------------------------------------------------------
 # yearly,DWV
@@ -379,6 +385,9 @@ ggplot()+
   guides(shape = guide_legend(order=1),linetype=guide_legend(order=2))+
   scale_x_continuous(breaks = c(seq(from = -7, to = 4, by = 1)))
 
+# Hosmer-Lemeshow Goodness of Fit
+hoslem.test(DWV.y1$DWV, fitted(model_p2q2_y1))  #p-value=1
+
 #--------------------------------------------------------------------------------------------------
 # yearly(counted by'Year'),DWV
 DWV.y2 <- data.y2[ ,c(1,7,19:21)]
@@ -476,7 +485,8 @@ ggplot()+
   guides(shape = guide_legend(order=1),linetype=guide_legend(order=2),color=guide_legend(order=3))+
   scale_x_continuous(breaks = c(seq(from = -7, to = 7, by = 1)))
 
-
+# Hosmer-Lemeshow Goodness of Fit
+hoslem.test(DWV.y2$DWV, fitted(model_p1_y2))  #p-value=1
 
 
 
