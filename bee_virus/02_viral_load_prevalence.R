@@ -4,7 +4,7 @@
 ## Student ID: u6890762                                 ##
 ## Project: evolution of bee viruses                    ##
 ## Purpose: plotting overall viral load and prevalence  ##
-## Version: 18                                          ##
+## Version: 19                                          ##
 ## Date: 10/11/20                                       ##
 ##                                                      ##
 ##########################################################
