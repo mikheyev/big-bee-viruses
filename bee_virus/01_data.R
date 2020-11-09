@@ -4,8 +4,8 @@
 ## Student ID: u6890762               ##
 ## Project: evolution of bee viruses  ##
 ## Purpose: data arrangement          ##
-## Version: 20                        ##
-## Date: 22/09/20                     ##
+## Version: 21                        ##
+## Date: 10/11/20                     ##
 ##                                    ##
 ########################################
 
