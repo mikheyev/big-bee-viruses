@@ -1,0 +1,28 @@
+##fileformat=VCFv4.0
+##fileDate=20201117
+##source=lofreq call -f 00_reference/BQCV.fasta --no-default-filter -r NC_003784.1:1-534 -o /tmp/lofreq2_call_parallelh_nghmfz/0.vcf.gz 06_hisat2_results/BQCV/7538/7538_sorted_mapped.bam 
+##reference=00_reference/BQCV.fasta
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw Depth">
+##INFO=<ID=AF,Number=1,Type=Float,Description="Allele Frequency">
+##INFO=<ID=SB,Number=1,Type=Integer,Description="Phred-scaled strand bias at this position">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Counts for ref-forward bases, ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=CONSVAR,Number=0,Type=Flag,Description="Indicates that the variant is a consensus variant (as opposed to a low frequency variant).">
+##INFO=<ID=HRUN,Number=1,Type=Integer,Description="Homopolymer length to the right of report indel position">
+##FILTER=<ID=min_snvqual_42,Description="Minimum SNV Quality (Phred) 42">
+##FILTER=<ID=min_indelqual_20,Description="Minimum Indel Quality (Phred) 20">
+##FILTER=<ID=min_dp_10,Description="Minimum Coverage 10">
+##FILTER=<ID=sb_fdr,Description="Strand-Bias Multiple Testing Correction: fdr corr. pvalue > 0.001000">
+##FILTER=<ID=min_snvqual_45,Description="Minimum SNV Quality (Phred) 45">
+##FILTER=<ID=min_indelqual_20,Description="Minimum Indel Quality (Phred) 20">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+NC_003784.1	8125	.	C	T	471	PASS	DP=12;AF=1.000000;SB=0;DP4=0,0,11,1
+NC_003784.1	8170	.	C	T	505	PASS	DP=13;AF=1.000000;SB=0;DP4=0,0,12,1
+NC_003784.1	8171	.	A	T	506	PASS	DP=13;AF=1.000000;SB=0;DP4=0,0,12,1
+NC_003784.1	8174	.	G	A	491	PASS	DP=13;AF=1.000000;SB=0;DP4=0,0,12,1
+NC_003784.1	8194	.	T	A	496	PASS	DP=13;AF=1.000000;SB=0;DP4=0,0,11,2
+NC_003784.1	8247	.	T	C	50	PASS	DP=25;AF=0.080000;SB=3;DP4=17,6,1,1
+NC_003784.1	8278	.	G	A	797	PASS	DP=20;AF=1.000000;SB=0;DP4=0,0,14,6
+NC_003784.1	8320	.	C	T	1017	PASS	DP=26;AF=1.000000;SB=0;DP4=0,0,17,9
+NC_003784.1	8326	.	T	C	951	PASS	DP=26;AF=1.000000;SB=0;DP4=0,0,17,9
+NC_003784.1	8435	.	T	A	1331	PASS	DP=47;AF=1.000000;SB=0;DP4=0,0,13,34
