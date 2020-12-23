@@ -1,0 +1,24 @@
+##fileformat=VCFv4.2
+##fileDate=20201117
+##source=quasitools
+##contig=<ID=NC_003784.1,length=8550>
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele Count">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency">
+##FILTER=<ID=q30,Description="Set if True; QUAL<30">
+##FILTER=<ID=ac5,Description="Set if True; AC<5">
+##FILTER=<ID=dp100,Description="Set if True; DP<100">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+NC_003784.1	118	.	c	t	19	q30;ac5;dp100	DP=6;AC=1;AF=0.1667
+NC_003784.1	157	.	g	c	19	q30;ac5;dp100	DP=5;AC=1;AF=0.2000
+NC_003784.1	265	.	a	g	50	ac5;dp100	DP=2;AC=2;AF=1.0000
+NC_003784.1	321	.	a	c	26	q30;ac5;dp100	DP=1;AC=1;AF=1.0000
+NC_003784.1	341	.	a	t	26	q30;ac5;dp100	DP=1;AC=1;AF=1.0000
+NC_003784.1	348	.	g	t	26	q30;ac5;dp100	DP=1;AC=1;AF=1.0000
+NC_003784.1	349	.	g	a	26	q30;ac5;dp100	DP=1;AC=1;AF=1.0000
+NC_003784.1	413	.	t	c	26	q30;ac5;dp100	DP=1;AC=1;AF=1.0000
+NC_003784.1	419	.	c	t	26	q30;ac5;dp100	DP=1;AC=1;AF=1.0000
+NC_003784.1	438	.	g	a	50	ac5;dp100	DP=2;AC=2;AF=1.0000
+NC_003784.1	490	.	c	t	50	ac5;dp100	DP=2;AC=2;AF=1.0000
+NC_003784.1	5695	.	t	g	23	q30;ac5;dp100	DP=2;AC=1;AF=0.5000
+NC_003784.1	8435	.	t	a	50	ac5;dp100	DP=2;AC=2;AF=1.0000
