@@ -1,0 +1,12 @@
+NC_003784.1 (8.6Kbp)
+>  43.16% │                                  █               │ Number of reads: 1
+>  38.36% │                                 ▄█               │ 
+>  33.57% │                                 ██               │ Covered bases:   150bp
+>  28.77% │                                 ██               │ Percent covered: 1.754%
+>  23.98% │                                 ██               │ Mean coverage:   0.0175x
+>  19.18% │                                 ██               │ Mean baseQ:      29.6
+>  14.39% │                                 ██               │ Mean mapQ:       60
+>   9.59% │                                 ██               │ 
+>   4.80% │                                 ██               │ Histo bin width: 171bp
+>   0.00% │                                 ██               │ Histo max bin:   47.953%
+          1        1.7K      3.4K      5.1K      6.8K       8.6K  
