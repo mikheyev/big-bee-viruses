@@ -1,0 +1,153 @@
+# This file was produced by bcftools stats (1.10.2+htslib-1.10.2-3) and can be plotted using plot-vcfstats.
+# The command line was:	bcftools stats  16_lofreq_bowtie2_results/6107/6107_lofreq.vcf.gz
+#
+# Definition of sets:
+# ID	[2]id	[3]tab-separated file names
+ID	0	16_lofreq_bowtie2_results/6107/6107_lofreq.vcf.gz
+# SN, Summary numbers:
+#   number of records   .. number of data rows in the VCF
+#   number of no-ALTs   .. reference-only sites, ALT is either "." or identical to REF
+#   number of SNPs      .. number of rows with a SNP
+#   number of MNPs      .. number of rows with a MNP, such as CC>TT
+#   number of indels    .. number of rows with an indel
+#   number of others    .. number of rows with other type, for example a symbolic allele or
+#                          a complex substitution, such as ACT>TCGA
+#   number of multiallelic sites     .. number of rows with multiple alternate alleles
+#   number of multiallelic SNP sites .. number of rows with multiple alternate alleles, all SNPs
+# 
+#   Note that rows containing multiple types will be counted multiple times, in each
+#   counter. For example, a row with a SNP and an indel increments both the SNP and
+#   the indel counter.
+# 
+# SN	[2]id	[3]key	[4]value
+SN	0	number of samples:	0
+SN	0	number of records:	112
+SN	0	number of no-ALTs:	0
+SN	0	number of SNPs:	112
+SN	0	number of MNPs:	0
+SN	0	number of indels:	0
+SN	0	number of others:	0
+SN	0	number of multiallelic sites:	0
+SN	0	number of multiallelic SNP sites:	0
+# TSTV, transitions/transversions:
+# TSTV	[2]id	[3]ts	[4]tv	[5]ts/tv	[6]ts (1st ALT)	[7]tv (1st ALT)	[8]ts/tv (1st ALT)
+TSTV	0	82	30	2.73	82	30	2.73
+# SiS, Singleton stats:
+# SiS	[2]id	[3]allele count	[4]number of SNPs	[5]number of transitions	[6]number of transversions	[7]number of indels	[8]repeat-consistent	[9]repeat-inconsistent	[10]not applicable
+SiS	0	1	112	82	30	0	0	0	0
+# AF, Stats by non-reference allele frequency:
+# AF	[2]id	[3]allele frequency	[4]number of SNPs	[5]number of transitions	[6]number of transversions	[7]number of indels	[8]repeat-consistent	[9]repeat-inconsistent	[10]not applicable
+AF	0	0.000000	112	82	30	0	0	0	0
+# QUAL, Stats by quality:
+# QUAL	[2]id	[3]Quality	[4]number of SNPs	[5]number of transitions (1st ALT)	[6]number of transversions (1st ALT)	[7]number of indels
+QUAL	0	56	1	0	1	0
+QUAL	0	57	1	1	0	0
+QUAL	0	58	6	5	1	0
+QUAL	0	59	4	3	1	0
+QUAL	0	60	3	1	2	0
+QUAL	0	61	2	2	0	0
+QUAL	0	62	4	4	0	0
+QUAL	0	63	3	3	0	0
+QUAL	0	64	5	3	2	0
+QUAL	0	65	1	1	0	0
+QUAL	0	66	1	1	0	0
+QUAL	0	67	1	1	0	0
+QUAL	0	68	1	1	0	0
+QUAL	0	69	4	2	2	0
+QUAL	0	71	1	1	0	0
+QUAL	0	76	2	1	1	0
+QUAL	0	77	1	1	0	0
+QUAL	0	78	1	1	0	0
+QUAL	0	80	1	1	0	0
+QUAL	0	81	1	1	0	0
+QUAL	0	82	1	0	1	0
+QUAL	0	83	2	0	2	0
+QUAL	0	84	2	1	1	0
+QUAL	0	87	1	1	0	0
+QUAL	0	89	2	1	1	0
+QUAL	0	90	6	6	0	0
+QUAL	0	95	3	2	1	0
+QUAL	0	105	1	1	0	0
+QUAL	0	107	3	2	1	0
+QUAL	0	111	1	1	0	0
+QUAL	0	112	1	1	0	0
+QUAL	0	122	1	0	1	0
+QUAL	0	131	1	1	0	0
+QUAL	0	140	1	1	0	0
+QUAL	0	147	1	1	0	0
+QUAL	0	170	1	1	0	0
+QUAL	0	172	1	0	1	0
+QUAL	0	174	2	2	0	0
+QUAL	0	178	2	2	0	0
+QUAL	0	187	1	0	1	0
+QUAL	0	188	2	1	1	0
+QUAL	0	191	1	0	1	0
+QUAL	0	202	1	0	1	0
+QUAL	0	206	3	3	0	0
+QUAL	0	210	1	0	1	0
+QUAL	0	249	1	1	0	0
+QUAL	0	253	1	1	0	0
+QUAL	0	260	1	1	0	0
+QUAL	0	265	1	1	0	0
+QUAL	0	266	2	2	0	0
+QUAL	0	321	1	1	0	0
+QUAL	0	328	1	1	0	0
+QUAL	0	363	1	1	0	0
+QUAL	0	441	1	1	0	0
+QUAL	0	448	1	0	1	0
+QUAL	0	715	1	1	0	0
+QUAL	0	718	1	1	0	0
+QUAL	0	768	1	0	1	0
+QUAL	0	784	1	1	0	0
+QUAL	0	785	1	1	0	0
+QUAL	0	998	10	6	4	0
+# IDD, InDel distribution:
+# IDD	[2]id	[3]length (deletions negative)	[4]number of sites	[5]number of genotypes	[6]mean VAF
+# ST, Substitution types:
+# ST	[2]id	[3]type	[4]count
+ST	0	A>C	5
+ST	0	A>G	18
+ST	0	A>T	5
+ST	0	C>A	3
+ST	0	C>G	3
+ST	0	C>T	27
+ST	0	G>A	20
+ST	0	G>C	1
+ST	0	G>T	4
+ST	0	T>A	6
+ST	0	T>C	17
+ST	0	T>G	3
+# DP, Depth distribution
+# DP	[2]id	[3]bin	[4]number of genotypes	[5]fraction of genotypes (%)	[6]number of sites	[7]fraction of sites (%)
+DP	0	12	0	0.000000	5	4.464286
+DP	0	13	0	0.000000	6	5.357143
+DP	0	14	0	0.000000	1	0.892857
+DP	0	15	0	0.000000	1	0.892857
+DP	0	16	0	0.000000	4	3.571429
+DP	0	17	0	0.000000	3	2.678571
+DP	0	18	0	0.000000	7	6.250000
+DP	0	19	0	0.000000	3	2.678571
+DP	0	20	0	0.000000	3	2.678571
+DP	0	21	0	0.000000	2	1.785714
+DP	0	22	0	0.000000	4	3.571429
+DP	0	23	0	0.000000	9	8.035714
+DP	0	24	0	0.000000	3	2.678571
+DP	0	25	0	0.000000	3	2.678571
+DP	0	26	0	0.000000	6	5.357143
+DP	0	27	0	0.000000	5	4.464286
+DP	0	28	0	0.000000	6	5.357143
+DP	0	29	0	0.000000	3	2.678571
+DP	0	30	0	0.000000	11	9.821429
+DP	0	31	0	0.000000	4	3.571429
+DP	0	32	0	0.000000	7	6.250000
+DP	0	33	0	0.000000	2	1.785714
+DP	0	34	0	0.000000	1	0.892857
+DP	0	35	0	0.000000	2	1.785714
+DP	0	40	0	0.000000	1	0.892857
+DP	0	50	0	0.000000	1	0.892857
+DP	0	78	0	0.000000	3	2.678571
+DP	0	100	0	0.000000	1	0.892857
+DP	0	115	0	0.000000	1	0.892857
+DP	0	127	0	0.000000	1	0.892857
+DP	0	132	0	0.000000	2	1.785714
+DP	0	144	0	0.000000	1	0.892857
